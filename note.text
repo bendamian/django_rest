@@ -1,0 +1,75 @@
+pyu#check python version
+python3 python -V
+
+#install python virtual environment
+sudo apt install python3.10-venv
+
+#create a virtual environment
+python3 -m venv <name>
+
+#activate virtual environment
+source <name>/bin/activate
+
+#stop your virtual environment
+deactivate
+------------------------------------------------
+# install django
+pip install django
+
+# check django list
+pip list
+
+#create a new project(dot is must in the end)
+django-admin startproject <name> .
+
+#start saver your development server
+python3 manage.py runserver
+
+#create a new app
+python3 manage.py startapp <name>
+
+** add your up app name to settings.py
+---------------------------------------------
+#create super user
+python3 manage.py createsuperuser
+
+** add a test model in backend/model.py
+------------------------------------------------------
+# add static and templates folders and register them in
+setting.py
+
+#add the media folder and add the folder in
+setting.py,urls.py
+----------------------[GeoDjango]-------------------------
+install GDAL  and Activating GeoDjango by adding
+"django.contrib.gis" to setting.py
+------------------------------------------------------
+#Installing SpatiaLite
+sudo apt install libsqlite3-mod-spatialite
+
+#Activating SpatiaLite
+# config/settings.py
+DATABASES = {"default": {
+"ENGINE": "django.contrib.gis.db.backends.spatialite",
+"NAME": BASE_DIR / "db.sqlite3",
+}}
+-------------------------------------------------
+install pillow for image uploads
+
+----------------------------------------
+Adding the Marker model to backend
+
+add do :-
+$ python -m manage makemigrations
+$ python -m manage migrate
+
+add the Marker model to admin.py
+-----------------------------------------
+#installing Django REST framework
+pip install djangorestframework
+pip install djangorestframework-gis
+
+and add to the
+'rest_framework',
+'rest_framework_gis',
+-----------------------------------
